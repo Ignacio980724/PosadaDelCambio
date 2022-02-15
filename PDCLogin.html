@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="stylePrincipal.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>La Posada del Cambio</title>
+</head>
+<body>
+   <!-- Barra de navegacion-->
+   <nav class="navbar-expand-lg navbar-light fondoVioleta mb-0">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="./index.html">La Posada del Cambio </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="./PDCPrincipal.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Yugioh</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Arquetipos</a>
+            <ul class="dropdown-menu fondoVioleta p-0" aria-labelledby="navbarDropdown ">
+              <li class="fondoVioleta "><a class="dropdown-item text-light" href="#">Structure Decks</a></li>
+              <li class="fondoVioleta"><a class="dropdown-item text-light" href="#">Grand Creators</a></li>
+              <li class="fondoVioleta"><a class="dropdown-item text-light" href="#">"El Dorado"</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Burst of Destiny</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./PDCCarrito.html"><img src="./icon/shopping-cart.svg" alt="icono del shopp"></a>
+          </li>
+          
+        </ul>
+        <form class="d-flex col-4 mb-2">
+          <input class="form-control me-2 " type="buscar" placeholder="buscar" aria-label="buscar">
+          <button class="btn btn-outline-light " type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+    <div class="rellenar"></div>
+  </nav>
+
+  <div><a href="#" class="btn-flotante"><img src="./icon/user.svg" alt="icono de usuario"></a></div>
+
+<!-- Bienvenido --> 
+
+<div class="fondoVioleta">
+  <div class="container w-50">
+    <div class="row">
+        <div class="col">
+
+        <h2 class="fw-bold text-center text-light py-5">Bienvenido</h2>
+
+        <!--Login-->
+
+      <form action="#">  
+      <div class="mb-4">
+      <label for="email" class="form-label text-light fw-bold">Correo electrónico</label>
+      <input type="email" class="form-control" name="email">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="form-label  fw-bold text-light">Contraseña</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <div class="mb-4 form-check">
+      <input type="checkbox" name="connected" class="form-check-input">
+      <label for="connected" class="form-check-label fw-bold text-light">Mantenerme conectado</label>
+      </div>
+  </div>
+</div>
+<div class="text-center">
+  <button type="submit" class="btn btn-primary text-light ">Iniciar Sesión</button>
+</div>
+
+
+<div class="my-3 text-center">
+  <span class="fw-bold text-light">No tienes cuenta? <a href="./PDCRegistro.html" class="fw-bold text-light">Regístrate</a></span> <br>
+  <span class="fw-bold text-light"><a href="#" class="text-light">Recuperar Password</a></span>
+</div>
+
+</form>
+
+<!--Login con Redes sociales-->
+
+<div class="container w-100 my-5">
+  <div class="row text-center">
+    <div class="col-12 fw-bold text-center text-light">Iniciar Sesión</div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-outline-primary w-75 my-1">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <img src="./icon/facebook.svg" alt="">
+          </div>
+          <div class="col-10 text-center">Facebook</div>
+        </div>
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-outline-danger w-75 my-1">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <img src="./icon/instagram.svg" alt="">
+          </div>
+          <div class="col-10 text-center">Instagram</div>
+        </div>
+      </button> 
+    </div>
+  </div>
+</div>
+</div>
+  <div class="rellenar"></div>
+
+ <!-- Pie de Pagina -->
+ <footer class="pie-pagina "> 
+  <div class="grupo-1">
+    <div class="box">
+      <figure>
+      <a href="#">
+        <!--img src="#" alt="logo de la pagina-->
+      </a>
+      </figure>
+    </div>
+    <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Aspernatur illo voluptate, commodi magnam fuga saepe ipsam 
+        voluptatum nostrum libero consequuntur quae dolore, sint odio 
+        delectus.</p>
+    </div>
+    <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="red-social">
+        <a href="https://www.facebook.com/" class=""><img src="./icon/facebook.svg" alt="logo-facebook"></a>
+        <a href="https://www.instagram.com/" class=""><img src="./icon/instagram.svg" alt="logo-instagram"></a>
+        <a href="https://www.twitter.com/" class=""><img src="./icon/twitter.svg" alt="logo-twitter"></a>
+      </div>
+    </div>
+  </div>
+  <div class="grupo-2">
+    <small>&copy; 2021 <b>La Posada del Cambio</b> - Todos los Derechos Reservados.</small>
+  </div>
+
+</footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+</body>     
