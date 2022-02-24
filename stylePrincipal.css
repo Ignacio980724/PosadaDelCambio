@@ -126,22 +126,11 @@ font-family: Helvetica;
 
     .rellenar{
         background-color:#e086d3;
-        padding: 15px 10px;
-    }
-
-    .col{
-        text-align: center;
-    }
-
-    .col-12{
-        text-align: center;
+        
     }
  
      /* Registrarse */
 
-    .container{
-        background-color: #9e0059;
-    }
 
     .centrar{
         display: flex;
@@ -190,9 +179,5 @@ body{
 
 /*Descripcion de Producto*/
 
-img{
-display: flex;
-justify-content: left;
-}
 
 
