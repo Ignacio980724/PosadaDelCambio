@@ -1,0 +1,65 @@
+<!-- HEAD -->
+
+<%- include("../partials/head.ejs") %>
+<body>
+  <!-- Barra de navegacion-->
+
+  <%- include("../partials/navbar.ejs") %>
+  
+  <!-- Boton Flotante -->
+  
+  <%- include("../partials/button.ejs") %>
+
+<!-- Cargar Producto -->
+
+<div class="fondoVioleta">
+    <div class="centrar">
+     <div class="box w-50">
+    <div class="container w-50 ">
+        <h2 class="fw-bold text-light text-center py-5">Editar</h2>
+     <form action="/save" method="POST" enctype="multipart/form-data"> <!--Cada vez que hagamos un formulario donde el archivo viaje a la ruta donde espcifiquemos tenemos que agregar: enctype="multipart/form-data"--> 
+        <div class="mb-4">
+            <label for="id" class="form-label fw-bold text-light mt-3">ID</label>
+            <input type="number" class="form-control" name="id" value="<%= editCard.id %>">
+        </div>
+        <div class="mb-4">
+            <label for="name" class="form-label fw-bold text-light mt-3">Nombre</label>
+            <input type="name" class="form-control" name="name" value="<%= editCard.name %>">
+        </div>
+        <div class="mb-4">
+            <label for="last-name" class="form-label fw-bold text-light">Descripción</label>
+            <input type="last-name" class="form-control" name="description" value="<%= editCard.description %>">
+        </div>
+         
+        <div class="mb-4">
+            <label for="email" class="form-label fw-bold text-light">Precio</label>
+            <input type="number" class="form-control" name="price" value="<%= editCard.price %>">
+        </div>
+                
+        <div class="mb-3">
+            <label for="formFile" class="form-label fw-bold text-light">Imagen del Producto</label>
+            <input name="img" class="form-control" type="file" id="img" multiple value="<%= editCard.img %>">
+        </div>
+
+        <div class="mb-3">
+            <img src="/images/cards/<%= editCard.img %>" alt="">
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn fw-bold btn-light mb-4">Guardar</button>
+        </div>
+     </form>
+</div>   
+</div>
+    
+ 
+       
+</div>
+
+<div class="rellenar"></div>
+
+  <!-- Pie de Pagina -->
+ 
+ <%- include("../partials/footer.ejs") %> 
+  
+</body>     

@@ -1,0 +1,46 @@
+<!-- HEAD -->
+
+<%- include("../partials/head.ejs") %>
+<body>
+  <!-- Barra de navegacion-->
+
+  <%- include("../partials/navbar.ejs") %>
+  
+  <!-- Boton Flotante -->
+  
+  <%- include("../partials/button.ejs") %>
+
+  <!-- Vista de Administrador -->
+
+  <table class="table border-dark">
+    <thead>
+      <tr>
+        <th scope="col-1">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col-1">Editar</th>
+        <th scope="col-1">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for( let i=0; i < cards.length; i++ ){ %>
+        <tr>
+        <td><%= cards[i].id %></td>
+        <td><%= cards[i].name %></td>
+        <td><%= cards[i].description %></td>
+        <td><%= cards[i].price %></td>
+        <td> <a type="buttom" title="editar" href="/edit/<%= cards[i].id %>"><img src="/icon/edit-3.svg" alt="icono de editar"></a></td>
+        <td> <a type="buttom" title="eliminar" href="/delete/<%= cards[i].id %>"><img src="/icon/x.svg" alt="icono de eliminar"></a></td>
+        </tr>
+      <% } %>
+      
+      
+    </tbody>
+  </table>
+
+  <!-- Pie de Pagina -->
+ 
+ <%- include("../partials/footer.ejs") %> 
+  
+</body>     

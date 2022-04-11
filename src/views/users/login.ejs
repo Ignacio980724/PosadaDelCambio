@@ -1,0 +1,89 @@
+<!-- HEAD -->
+
+<%- include("../partials/head.ejs") %>
+
+<body>
+   <!-- Barra de navegacion-->
+
+   <%- include("../partials/navbar.ejs") %>
+
+  <!-- Boton Flotante -->
+  
+<%- include("../partials/button.ejs") %>
+
+<!-- Bienvenido --> 
+
+<div class="fondoVioleta ">
+  <div class="container w-50">
+    <div class="row">
+        <div class="col">
+
+        <h2 class="fw-bold text-center text-light py-5">Bienvenido</h2>
+
+        <!--Login-->
+
+      <form action="#">  
+      <div class="mb-4">
+      <label for="email" class="form-label text-light fw-bold">Correo electrónico</label>
+      <input type="email" class="form-control" name="email">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="form-label  fw-bold text-light">Contraseña</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+      <div class="mb-4 form-check">
+      <input type="checkbox" name="connected" class="form-check-input">
+      <label for="connected" class="form-check-label fw-bold text-light">Mantenerme conectado</label>
+      </div>
+  </div>
+</div>
+<div class="text-center">
+  <button type="submit" class="btn btn-primary text-light ">Iniciar Sesión</button>
+</div>
+
+
+<div class="my-3 text-center">
+  <span class="fw-bold text-light">No tienes cuenta? <a href="/register" class="fw-bold text-light">Regístrate</a></span> <br>
+  <span class="fw-bold text-light"><a href="#" class="text-light">Recuperar Password</a></span>
+</div>
+
+</form>
+
+<!--Login con Redes sociales-->
+
+<div class="container w-100 my-5">
+  <div class="row text-center">
+    <div class="col-12 fw-bold text-center text-light">Iniciar Sesión</div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-outline-primary w-75 my-1">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <img src="./icon/facebook.svg" alt="Facebook">
+          </div>
+          <div class="col-10 text-center">Facebook</div>
+        </div>
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-outline-danger w-75 my-1">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <img src="./icon/instagram.svg" alt="Instagram">
+          </div>
+          <div class="col-10 text-center">Instagram</div>
+        </div>
+      </button> 
+    </div>
+  </div>
+</div>
+</div>
+  <div class="rellenar"></div>
+
+ <!-- Pie de Pagina -->
+ 
+<%- include("../partials/footer.ejs") %>
+
+</body>
+    

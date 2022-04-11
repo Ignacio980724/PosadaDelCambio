@@ -1,0 +1,52 @@
+<!-- HEAD -->
+
+<%- include("../partials/head.ejs") %>
+<body>
+  <!-- Barra de navegacion-->
+
+  <%- include("../partials/navbar.ejs") %>
+  
+  <!-- Boton Flotante -->
+  
+  <%- include("../partials/button.ejs") %>
+
+<!-- Vista de Usuario -->
+
+<div class="fondo ">
+<div class="centrar">
+ <div class="box w-50">
+<div class="container w-50 ">
+    <h2 class="fw-bold text-light text-center py-5">Opciones de Usuario</h2>
+ <form action="#"> <div class="mb-4">
+        <label for="name" class="form-label fw-bold text-light mt-3">¿Cambio de Nombre?</label>
+            <input type="name" class="form-control" name="name">
+            </div>
+                <div class="mb-4">
+                    <label for="last-name" class="form-label fw-bold text-light">Cambio de Contraseña</label>
+                        <input type="password" class="form-control" name="password">
+                </div>
+    <form action="#">  
+            <div class="mb-4">
+                    <label for="email" class="form-label fw-bold text-light">¿Cambio de Correo electrónico?</label>
+                        <input type="email" class="form-control" name="email">
+                </div>
+              
+</div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mb-4">Enviar</button>
+            </div>    
+</div>   
+</div>
+          
+</div>
+
+</form>  
+    
+
+ <div class="rellenar"></div>
+ 
+  <!-- Pie de Pagina -->
+ 
+ <%- include("../partials/footer.ejs") %> 
+  
+</body>     
