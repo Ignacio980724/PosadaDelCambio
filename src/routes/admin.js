@@ -28,6 +28,7 @@ router.get("/edit/:id", controllersAdmin.edit);
 router.get("/create", controllersAdmin.create);
 router.post("/save", upload.any("img"), controllersAdmin.save);
 router.get("/delete/:id", controllersAdmin.delete);
+router.put("/edit/:id", upload.any("img"), controllersAdmin.update);
 
 //Exportamos el modulo
 

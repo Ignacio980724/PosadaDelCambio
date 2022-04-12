@@ -89,6 +89,31 @@ module.exports = {
 
         //Redireccionamos a la vista
         res.redirect("/admin");
+    },
+
+    update: (req, res) => {
+        //Obtención de datos del archivo JSON
+        let cards = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "data", "cards.json")));
+
+        //Utilizamos un if ternario para saber si se a enviado una nueva imagen si esta llegando una nueva imagen en el req.file =>(entonces"=>") guardar el nombre nuevo.En caso que no haya entrado nada se mantiene la misma imagen anterior.
+        req.body.img = req.files[0] ? req.files[0].filename : req.body.img;
+
+        //Actualizamos el producto en la lista
+        let cardsUpdate = cards.map(card => {
+            if(card.id == req.body.id){
+                card = req.body;
+            };
+            return card;
+        })
+        
+        //Convertimos el arreglo en un String e indicamos que se guarde un producto bajo el otro con "null, 2"
+        let cardsToSave = JSON.stringify(cardsUpdate, null, 2);
+        
+        //Sobreescribimos el archivo json guardando el nuevo producto
+        fs.writeFileSync(path.resolve(__dirname, "..", "data", "cards.json"), cardsToSave);
+
+        //Redireccionamos a la vista del administrador
+        res.redirect("/");
     }
 
 }
