@@ -113,7 +113,7 @@ module.exports = {
         fs.writeFileSync(path.resolve(__dirname, "..", "data", "cards.json"), cardsToSave);
 
         //Redireccionamos a la vista del administrador
-        res.redirect("/");
+        res.redirect("/admin");
     }
 
 }

@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require("method-override"); 
 
 //Requerimos Rutas
 const indexRouter = require('./routes/index');
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, "..", "public")));
+app.use(methodOverride("_method"));//es necesario instalar esta dependencia para que funcione el metodo put.
 
 // Implementación de las rutas
 app.use(indexRouter);
