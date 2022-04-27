@@ -1,0 +1,18 @@
+[
+  {
+    "id": "6678",
+    "category": "mangas",
+    "name": "fasdfad",
+    "description": "Manga Ivrea",
+    "price": "600",
+    "img": "card-1650378581007.jpg"
+  },
+  {
+    "id": "2",
+    "category": "mangas",
+    "name": "Akame Ga Kill",
+    "description": "Manga Ivrea",
+    "price": "600",
+    "img": "card-1650634377316.jpg"
+  }
+]

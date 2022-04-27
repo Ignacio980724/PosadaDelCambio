@@ -8,12 +8,17 @@ const multer = require("multer");
 //Asignamos nombre del archivo y donde lo vamos a guardar
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.resolve(__dirname, "..", "..", "public", "images", "cards"));
+        if (req.body.category == "cards" ) {
+            cb(null, path.resolve(__dirname, "..", "..", "public", "images", "cards"));  
+        } else {
+            cb(null, path.resolve(__dirname, "..", "..", "public", "images", "mangas"));   
+        }
     },
     filename: (req, file, cb) => {
         cb(null, "card-" + Date.now() + path.extname(file.originalname));
         //Path.extname: obtiene la extension del archivo. file: es donde estan todos los datos del archivo que viaja desde el front hacia el back. originalname: es el nombre original del archivo.
     }
+
 });
 const upload = multer({storage: storage});
 

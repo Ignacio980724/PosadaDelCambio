@@ -9,7 +9,7 @@ const controllersProducts = require(path.resolve(__dirname, "..", "controllers",
 //Creamos Rutas
 router.get("/product", controllersProducts.show);
 router.get("/cards", controllersProducts.cards);
-
+//router.get("mangas", controllersProducts.mangas);
 
 //Exportamos el modulo
 module.exports = router;

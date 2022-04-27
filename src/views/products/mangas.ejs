@@ -13,20 +13,19 @@
   
   <%- include("../partials/button.ejs") %>
 
-  <!-- Cartas -->
-
+  <!-- Mangas -->
   <div class="row">
-      <% for(let i=0; i < cards.length; i++ ){ %>
-    <div class="card col-3">
-        <img src="/images/cards/<%= cards[i].img %>" class="card-img-top tCartas">
-        <div class="card-body">
-          <h5 class="card-title"><%= cards[i].name %></h5>
-          <p class="card-text"><%= cards[i].description %></p>
-          <p class="card-text fw-bold">$ <%= cards[i].price %></p>
-          <a href="#" class="btn btn-light">Añadir al carrito</a>
-        </div>
-    </div>
-      <% } %>
+    <% for(let i=0; i < cards.length; i++ ){ %>
+  <div class="card col-3">
+      <img src="/images/mangas/<%= mangas[i].img %>" class="card-img-top tCartas" alt="<%= mangas[i].name %>">
+      <div class="card-body">
+        <h5 class="card-title"><%= mangas[i].name %></h5>
+        <p class="card-text"><%= mangas[i].description %></p>
+        <p class="card-text fw-bold">$ <%= mangas[i].price %></p>
+        <a href="#" class="btn btn-light">Añadir al carrito</a>
+      </div>
+  </div>
+    <% } %>
 </div>
 
   <div class="rellenar"></div>

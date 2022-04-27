@@ -6,9 +6,9 @@ var logger = require('morgan');
 var methodOverride = require("method-override"); 
 
 //Requerimos Rutas
+const usersRouter = require('./routes/users');
 const indexRouter = require('./routes/index');
 const adminRouter = require ("./routes/admin");
-const usersRouter = require('./routes/users');
 const productsRouter = require ("./routes/products");
 
 //Requerimos los middlewors
@@ -28,9 +28,9 @@ app.use(express.static(path.resolve(__dirname, "..", "public")));
 app.use(methodOverride("_method"));//es necesario instalar esta dependencia para que funcione el metodo put.
 
 // Implementación de las rutas
+app.use(usersRouter);
 app.use(indexRouter);
 app.use(adminRouter);
-app.use(usersRouter);
 app.use(productsRouter);
 
 
